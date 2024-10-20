@@ -1566,6 +1566,8 @@
     <wire from="(900,580)" to="(900,610)"/>
     <wire from="(920,590)" to="(1180,590)"/>
     <wire from="(920,590)" to="(920,610)"/>
+    <wire from="(960,540)" to="(970,540)"/>
+    <wire from="(970,540)" to="(970,630)"/>
   </circuit>
   <circuit name="ControlUnit">
     <a name="appearance" val="custom"/>
@@ -2038,20 +2040,23 @@
     <comp lib="1" loc="(1340,930)" name="OR Gate">
       <a name="size" val="30"/>
     </comp>
-    <comp lib="1" loc="(1800,1240)" name="OR Gate">
-      <a name="inputs" val="3"/>
+    <comp lib="1" loc="(1810,1240)" name="OR Gate">
+      <a name="inputs" val="4"/>
       <a name="size" val="70"/>
     </comp>
-    <wire from="(1340,930)" to="(1700,930)"/>
-    <wire from="(1700,1270)" to="(1730,1270)"/>
-    <wire from="(1700,930)" to="(1700,1270)"/>
-    <wire from="(1710,1240)" to="(1730,1240)"/>
-    <wire from="(1710,160)" to="(1710,1240)"/>
-    <wire from="(1720,1210)" to="(1730,1210)"/>
+    <wire from="(1340,930)" to="(1690,930)"/>
+    <wire from="(1690,1270)" to="(1740,1270)"/>
+    <wire from="(1690,930)" to="(1690,1270)"/>
+    <wire from="(1700,1250)" to="(1740,1250)"/>
+    <wire from="(1700,820)" to="(1700,1250)"/>
+    <wire from="(1710,1230)" to="(1740,1230)"/>
+    <wire from="(1710,160)" to="(1710,1230)"/>
+    <wire from="(1720,1210)" to="(1740,1210)"/>
     <wire from="(1720,150)" to="(1720,1210)"/>
-    <wire from="(1800,1240)" to="(1910,1240)"/>
+    <wire from="(1810,1240)" to="(1910,1240)"/>
     <wire from="(290,970)" to="(360,970)"/>
     <wire from="(310,310)" to="(380,310)"/>
+    <wire from="(380,820)" to="(1700,820)"/>
     <wire from="(380,920)" to="(1310,920)"/>
     <wire from="(380,940)" to="(1310,940)"/>
     <wire from="(400,150)" to="(1720,150)"/>
@@ -2090,7 +2095,8 @@
       <a name="inputs" val="5"/>
       <a name="size" val="70"/>
     </comp>
-    <comp lib="1" loc="(780,920)" name="OR Gate">
+    <comp lib="1" loc="(790,920)" name="OR Gate">
+      <a name="inputs" val="3"/>
       <a name="size" val="30"/>
     </comp>
     <comp lib="1" loc="(810,290)" name="NOR Gate">
@@ -2109,8 +2115,9 @@
     <wire from="(1480,1230)" to="(1570,1230)"/>
     <wire from="(200,950)" to="(270,950)"/>
     <wire from="(220,290)" to="(290,290)"/>
-    <wire from="(290,900)" to="(750,900)"/>
-    <wire from="(290,920)" to="(750,920)"/>
+    <wire from="(290,800)" to="(740,800)"/>
+    <wire from="(290,900)" to="(730,900)"/>
+    <wire from="(290,920)" to="(720,920)"/>
     <wire from="(310,130)" to="(750,130)"/>
     <wire from="(310,140)" to="(740,140)"/>
     <wire from="(310,150)" to="(730,150)"/>
@@ -2123,17 +2130,21 @@
     <wire from="(710,310)" to="(770,310)"/>
     <wire from="(720,210)" to="(720,300)"/>
     <wire from="(720,300)" to="(770,300)"/>
+    <wire from="(720,920)" to="(720,930)"/>
+    <wire from="(720,930)" to="(760,930)"/>
     <wire from="(730,150)" to="(730,280)"/>
     <wire from="(730,280)" to="(770,280)"/>
+    <wire from="(730,900)" to="(730,920)"/>
+    <wire from="(730,920)" to="(760,920)"/>
     <wire from="(740,140)" to="(1280,140)"/>
     <wire from="(740,140)" to="(740,270)"/>
     <wire from="(740,270)" to="(770,270)"/>
+    <wire from="(740,800)" to="(740,910)"/>
+    <wire from="(740,910)" to="(760,910)"/>
     <wire from="(750,130)" to="(1290,130)"/>
     <wire from="(750,130)" to="(750,260)"/>
     <wire from="(750,260)" to="(770,260)"/>
-    <wire from="(750,900)" to="(750,910)"/>
-    <wire from="(750,920)" to="(750,930)"/>
-    <wire from="(780,920)" to="(940,920)"/>
+    <wire from="(790,920)" to="(940,920)"/>
     <wire from="(810,290)" to="(940,290)"/>
     <wire from="(940,290)" to="(940,360)"/>
     <wire from="(940,360)" to="(950,360)"/>
@@ -2417,6 +2428,9 @@
     <comp lib="1" loc="(1280,930)" name="OR Gate">
       <a name="size" val="30"/>
     </comp>
+    <comp lib="1" loc="(1410,880)" name="AND Gate">
+      <a name="size" val="30"/>
+    </comp>
     <comp lib="1" loc="(1410,920)" name="AND Gate">
       <a name="size" val="30"/>
     </comp>
@@ -2427,14 +2441,23 @@
     <wire from="(1280,930)" to="(1380,930)"/>
     <wire from="(1320,250)" to="(1320,910)"/>
     <wire from="(1320,910)" to="(1380,910)"/>
-    <wire from="(1410,920)" to="(1750,920)"/>
-    <wire from="(1750,1230)" to="(1770,1230)"/>
-    <wire from="(1750,920)" to="(1750,1230)"/>
+    <wire from="(1330,820)" to="(1330,890)"/>
+    <wire from="(1330,890)" to="(1380,890)"/>
+    <wire from="(1350,200)" to="(1350,870)"/>
+    <wire from="(1350,870)" to="(1380,870)"/>
+    <wire from="(1410,880)" to="(1490,880)"/>
+    <wire from="(1410,920)" to="(1480,920)"/>
+    <wire from="(1480,1250)" to="(1770,1250)"/>
+    <wire from="(1480,920)" to="(1480,1250)"/>
+    <wire from="(1490,1240)" to="(1770,1240)"/>
+    <wire from="(1490,880)" to="(1490,1240)"/>
     <wire from="(1800,1240)" to="(1860,1240)"/>
     <wire from="(290,970)" to="(360,970)"/>
     <wire from="(310,310)" to="(380,310)"/>
+    <wire from="(380,820)" to="(1330,820)"/>
     <wire from="(380,920)" to="(1250,920)"/>
     <wire from="(380,940)" to="(1250,940)"/>
+    <wire from="(400,200)" to="(1350,200)"/>
     <wire from="(400,250)" to="(1320,250)"/>
   </circuit>
   <circuit name="MEM_SELECT_SignalGen">
@@ -2470,12 +2493,15 @@
       <a name="inputs" val="3"/>
       <a name="size" val="30"/>
     </comp>
-    <wire from="(1760,1230)" to="(1770,1230)"/>
-    <wire from="(1760,920)" to="(1760,1230)"/>
+    <wire from="(1590,1250)" to="(1770,1250)"/>
+    <wire from="(1590,920)" to="(1590,1250)"/>
+    <wire from="(1750,1230)" to="(1770,1230)"/>
+    <wire from="(1750,820)" to="(1750,1230)"/>
     <wire from="(1800,1240)" to="(1860,1240)"/>
     <wire from="(290,970)" to="(360,970)"/>
     <wire from="(310,310)" to="(380,310)"/>
-    <wire from="(380,920)" to="(1760,920)"/>
+    <wire from="(380,820)" to="(1750,820)"/>
+    <wire from="(380,920)" to="(1590,920)"/>
   </circuit>
   <circuit name="PC_CLK_SignalGen">
     <a name="appearance" val="logisim_evolution"/>
@@ -2567,6 +2593,9 @@
     <comp lib="1" loc="(1130,930)" name="OR Gate">
       <a name="size" val="30"/>
     </comp>
+    <comp lib="1" loc="(1180,880)" name="AND Gate">
+      <a name="size" val="30"/>
+    </comp>
     <comp lib="1" loc="(1180,920)" name="AND Gate">
       <a name="size" val="30"/>
     </comp>
@@ -2576,16 +2605,25 @@
     </comp>
     <wire from="(1120,260)" to="(1120,910)"/>
     <wire from="(1120,910)" to="(1150,910)"/>
+    <wire from="(1130,820)" to="(1130,890)"/>
+    <wire from="(1130,890)" to="(1150,890)"/>
     <wire from="(1130,930)" to="(1150,930)"/>
-    <wire from="(1180,920)" to="(1740,920)"/>
-    <wire from="(1740,1250)" to="(1770,1250)"/>
-    <wire from="(1740,920)" to="(1740,1250)"/>
+    <wire from="(1140,200)" to="(1140,870)"/>
+    <wire from="(1140,870)" to="(1150,870)"/>
+    <wire from="(1180,880)" to="(1500,880)"/>
+    <wire from="(1180,920)" to="(1490,920)"/>
+    <wire from="(1490,1250)" to="(1770,1250)"/>
+    <wire from="(1490,920)" to="(1490,1250)"/>
+    <wire from="(1500,1240)" to="(1770,1240)"/>
+    <wire from="(1500,880)" to="(1500,1240)"/>
     <wire from="(1760,1230)" to="(1770,1230)"/>
     <wire from="(1800,1240)" to="(1860,1240)"/>
     <wire from="(290,970)" to="(360,970)"/>
     <wire from="(310,310)" to="(380,310)"/>
+    <wire from="(380,820)" to="(1130,820)"/>
     <wire from="(380,920)" to="(1100,920)"/>
     <wire from="(380,940)" to="(1100,940)"/>
+    <wire from="(400,200)" to="(1140,200)"/>
     <wire from="(400,260)" to="(1120,260)"/>
   </circuit>
 </project>
