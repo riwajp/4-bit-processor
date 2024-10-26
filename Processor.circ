@@ -1247,6 +1247,9 @@
       <a name="fanout" val="16"/>
       <a name="incoming" val="16"/>
     </comp>
+    <comp lib="1" loc="(1090,580)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
     <comp lib="1" loc="(1330,1150)" name="OR Gate">
       <a name="facing" val="south"/>
       <a name="size" val="30"/>
@@ -1299,12 +1302,12 @@
     <comp loc="(2050,940)" name="ACC_SELECT_SignalGen"/>
     <comp loc="(650,530)" name="PC"/>
     <comp loc="(660,990)" name="SyncCounter"/>
-    <wire from="(1060,310)" to="(1060,770)"/>
-    <wire from="(1060,310)" to="(1090,310)"/>
     <wire from="(1090,130)" to="(1090,200)"/>
     <wire from="(1090,130)" to="(1830,130)"/>
     <wire from="(1090,200)" to="(1090,310)"/>
     <wire from="(1090,200)" to="(1100,200)"/>
+    <wire from="(1090,310)" to="(1090,550)"/>
+    <wire from="(1090,580)" to="(1090,770)"/>
     <wire from="(1120,1010)" to="(1120,1020)"/>
     <wire from="(1120,1020)" to="(1130,1020)"/>
     <wire from="(1130,210)" to="(1130,420)"/>
@@ -1577,8 +1580,8 @@
     <wire from="(910,1570)" to="(1920,1570)"/>
     <wire from="(940,1340)" to="(1700,1340)"/>
     <wire from="(960,760)" to="(960,770)"/>
-    <wire from="(960,770)" to="(1060,770)"/>
-    <wire from="(970,310)" to="(1060,310)"/>
+    <wire from="(960,770)" to="(1090,770)"/>
+    <wire from="(970,310)" to="(1090,310)"/>
     <wire from="(970,310)" to="(970,320)"/>
   </circuit>
   <circuit name="System_Bus">
@@ -3505,6 +3508,7 @@
       <a name="inputs" val="3"/>
       <a name="size" val="30"/>
     </comp>
+    <comp lib="1" loc="(620,530)" name="NOT Gate"/>
     <wire from="(1180,240)" to="(1180,250)"/>
     <wire from="(1210,240)" to="(1220,240)"/>
     <wire from="(1220,240)" to="(1220,810)"/>
@@ -3515,12 +3519,13 @@
     <wire from="(1760,1230)" to="(1770,1230)"/>
     <wire from="(1760,820)" to="(1760,1230)"/>
     <wire from="(1800,1240)" to="(1860,1240)"/>
-    <wire from="(250,530)" to="(1240,530)"/>
+    <wire from="(250,530)" to="(590,530)"/>
     <wire from="(290,970)" to="(360,970)"/>
     <wire from="(310,310)" to="(380,310)"/>
     <wire from="(380,830)" to="(1280,830)"/>
     <wire from="(400,230)" to="(1180,230)"/>
     <wire from="(400,240)" to="(1180,240)"/>
+    <wire from="(620,530)" to="(1240,530)"/>
   </circuit>
   <circuit name="FlagsEn_SignalGen">
     <a name="appearance" val="logisim_evolution"/>
