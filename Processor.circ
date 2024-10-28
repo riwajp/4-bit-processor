@@ -1955,7 +1955,7 @@
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="Board"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="64.0"/>
+    <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(1220,450)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="EN"/>

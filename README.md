@@ -1,2 +1,6 @@
 # 4-bit-processor
-A programmable 4-bit microprocessor based on Von-Neumann architecture built in Logisim.
+This repository contains a **4-bit programmable processor** designed in **Logisim**. It is based on **Von Neumann architecture** and built from the ground up at the gates level. It features a custom instruction set and can load program codes for execution.
+
+![screenshot](https://github.com/riwajp/4-bit-processor/blob/main/screenshots/processor.png?raw=true)
+
+
