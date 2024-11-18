@@ -20,8 +20,8 @@ Each of the registers is connected to the data bus for input and have an edge tr
 
 
 ### ALU
-
-The ALU performs all arithmetic and logical operations in the processor. It consists of 8 basic operations: 
+![[ALU.png]]
+The ALU performs all arithmetic and logical operations in the processor. The output of the operations performed by the ALU is set to Accumulator (A Register). It consists of 8 basic operations: 
 - **Arithmetic Operations**: ADD, SUBTRACT
 - **Logical Operations**: NOT, AND, OR, XOR
 - **Bitwise Operations**: Left Shift, Right Shift
@@ -32,16 +32,48 @@ ADD and SUBTRACT are binary operations whereas rest are unary operations. For bi
 #### Operation Select
 To select the one of 8 instructions, a 3 bit switch is used. The lower 3 bits of the OPCODE are taken as the switch bits. The remaining most significant bit has no role in selecting the operation in ALU.
 
-| S3 (Don't Care) | S2  | S1  | S0  | Operation |
-| --------------- | --- | --- | --- | --------- |
-| 1               | 0   | 0   | 0   | ADD       |
-| 1               | 0   | 0   | 1   | SUBTRACT  |
-| 1               | 0   | 1   | 0   | COMP      |
-| 0               | 0   | 1   | 1   | AND       |
-| 1               | 1   | 0   | 0   | OR        |
-| 0               | 1   | 0   | 1   | XOR       |
-| 1               | 1   | 1   | 0   | LSHIFT    |
-| 1               | 1   | 1   | 1   | RSHIFT    |
+| S3  | S2  | S1  | S0  | Operation |
+| --- | --- | --- | --- | --------- |
+| 1   | 0   | 0   | 0   | ADD       |
+| 1   | 0   | 0   | 1   | SUBTRACT  |
+| 1   | 0   | 1   | 0   | COMP      |
+| 0   | 0   | 1   | 1   | AND       |
+| 1   | 1   | 0   | 0   | OR        |
+| 0   | 1   | 0   | 1   | XOR       |
+| 1   | 1   | 1   | 0   | LSHIFT    |
+| 1   | 1   | 1   | 1   | RSHIFT    |
+
+
+
+
+### System Bus
+![[SystemBus.png]]
+The system bus consists of a 4-bit Data Bus, an 8-bit Address Bus and some control signals. 
+
+#### Data Bus
+The processor contains a 4-bit data bus.  The content on the data bus is selected from among the registers and the memory, by a  series of multiplexers. The table below shows the control signals and the corresponding content of data bus when that signal is enabled. 
+
+| Control Signal | Data Bus Content               |
+| -------------- | ------------------------------ |
+| ALU_OP         | Output from ALU                |
+| ACC_SELECT     | Content from Accumulator       |
+| MEM_SELECT     | Content from Memory            |
+| PC_EN          | Content from Memory            |
+| Otherwise      | Content from selected Register |
+
+##### Selecting Registers
+For operations related to data movement involving the registers, the lower 4 bits (L) of the address bus is used along with the opcode in the instruction. The lower 2 bits of L are used to generate signals that selects one of 4 registers to load their content into data bus. The higher 2 bits of L select the LD signals for one of 4 registers. The load signals are labelled as REG1 to REG4, each signal acting as LD signal for one of the registers. The LD signal enables the destination register to load the content of data bus into it.
+
+#### Address Bus
+The processor contains an 8-bit address bus, divided into 2 halves. The lower order 4 bits are held by L and higher order 4 bits by H i.e. address are formed as : HL. The two halves HL are relevant only in the context of loading the address using instructions directly, i.e. when the value of PC (Program Counter) is loaded into address bus, the concept of HL is irrelevant, it is loaded as a single 8-bit address.
+
+The address bus can hold one of 2 addresses:
+1. The address loaded using instructions i.e. HL.
+2. The PC address.
+
+The address held by the address bus is selected by the PC_EN control signal. If PC_EN is high, the address bus is set to PC value, else HL value.
+
+
 
 
 
