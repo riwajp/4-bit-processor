@@ -103,7 +103,7 @@ The ALU supports the following operations:
 | `PC_EN`        | Content from Program Counter |
 | Otherwise      | Content from selected Register |
 
-#### Register Selection
+### Register Selection
 - **Lower 2 bits of L (address bus)**: Select source register.
 - **Higher 2 bits of L**: Generate load (`LD`) signals for destination register.
 
